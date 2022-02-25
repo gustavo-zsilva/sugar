@@ -1,7 +1,18 @@
+import Head from "next/head"
+import { Header } from "@components/Header"
+
+import { Container } from "../styles/pages/Home"
+
 export default function Home() {
   return (
-    <div>
-        Hello World
-    </div>
+    <Container>
+        <Head>
+            <title>Sugar!</title>
+        </Head>
+        
+        <div>
+            <Header />
+        </div>
+    </Container>
   )
 }
