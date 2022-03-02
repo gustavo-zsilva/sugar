@@ -24,7 +24,7 @@ export default function Home() {
                     <span>choose, click and enjoy.</span>
                 </div>
                 <ButtonGroup>
-                    <Button aria-label="Browse Sweets" type="purple">
+                    <Button aria-label="Browse Sweets" type="primary">
                         <span>Browse Sweets</span>
                         <FiArrowRight size={32} />
                     </Button>

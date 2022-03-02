@@ -30,7 +30,7 @@ export const Button = styled('button', {
                     background: 'linear-gradient(transparent 80%, $primary)',
                 }
             },
-            purple: {
+            primary: {
                 background: '$primary',
                 '&:hover': {
                     background: '$primaryDark',
