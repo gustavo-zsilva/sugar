@@ -12,10 +12,11 @@ export const SocialButton = styled('a', {
     color: '$white',
 
     padding: '.2rem',
-    borderRadius: '50%',
+    borderRadius: '$round',
     
     cursor: 'pointer',
     transition: '.2s',
+    
     '&:hover': {
         background: '$primaryDark',
     }
