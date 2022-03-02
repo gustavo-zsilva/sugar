@@ -7,23 +7,38 @@ export const Container = styled('header', {
     alignItems: 'center',
     padding: '1rem 0',
 
-    'strong': {
-        color: '$lightBlack',
-        fontSize: '1.2rem',
+    '> div': {
         display: 'flex',
-        gridGap: '.2rem',
-        alignItems: 'center',
+        gridGap: '$1',
+        
+        '> strong': {
+            color: '$lightBlack',
+            fontSize: '1.2rem',
+            display: 'flex',
+            gridGap: '.2rem',
+            alignItems: 'center',
+            textShadow: '2px 2px #EEF5DB',
+        },
+    },
+})
+
+export const VisitCounter = styled('div', {
+    display: 'flex',
+    alignItems: 'center',
+    gridGap: '6px',
+
+    padding: '.2rem 1rem',
+    borderRadius: '$full',
+    background: '$green',
+    opacity: '.9',
+
+    boxShadow: '0 0 3px 3px rgba(0, 0, 0, 0.03)',
+
+    '@mobile': {
+        display: 'none',
     },
 
-    'button': {
-        background: '$lightBlack',
-        padding: '.6rem 1.2rem',
-        borderRadius: '999px',
-        border: 0,
+    '@tablet': {
         display: 'flex',
-        alignItems: 'center',
-        gridGap: '.4rem',
-        color: '$white',
-        fontWeight: '$semiBold',
-    },
+    }
 })
