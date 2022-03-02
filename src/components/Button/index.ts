@@ -8,12 +8,11 @@ export const Button = styled('button', {
     background: '$lightBlack',
     color: '$white',
     fontWeight: '$semiBold',
+    borderRadius: '$full',
     
     padding: '1rem',
-    borderRadius: '999px',
-    border: 0,
     gridGap: '.4rem',
-
+    
     transition: '.2s',
     boxShadow: '0 0 3px 3px rgba(0, 0, 0, 0.03)',
 
@@ -25,6 +24,11 @@ export const Button = styled('button', {
                 borderRadius: 'initial',
                 borderBottom: '3px solid',
                 boxShadow: '0 0 0 transparent',
+                transition: '.2s',
+
+                '&:hover': {
+                    background: 'linear-gradient(transparent 80%, $primary)',
+                }
             },
             purple: {
                 background: '$primary',
