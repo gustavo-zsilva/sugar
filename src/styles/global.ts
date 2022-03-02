@@ -13,13 +13,17 @@ export const globalStyles = globalCss({
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
         fontFamily: 'Poppins',
+        fontSize: '1.125rem',
         color: '$black',
         height: '100vh',
-        fontSize: '1.1rem',
     },
     'button': {
         border: 0,
         fontFamily: 'Poppins',
         cursor: 'pointer',
-    }
+        fontSize: '1.125rem',
+    },
+    'a': {
+        textDecoration: 'none',
+    },
 })
