@@ -1,15 +1,19 @@
 import { styled } from "../stitches.config";
 
 export const Container = styled('div', {
-    maxWidth: '80rem',
-    margin: 'auto',
     height: '100vh',
 
-    '@sm': {
-        margin: '0 1rem',
+    '@mobile': {
+        mx: '$1',
+    },
+    '@tablet': {
+        mx: '$2',
     },
 
-    'div': {
+    '> div': {
+        maxWidth: '80rem',
+        margin: 'auto',
+
         display: 'grid',
         gridTemplateAreas: `
             'Header Header'
@@ -19,35 +23,83 @@ export const Container = styled('div', {
         gridTemplateColumns: '1fr 1fr',
         gridTemplateRows: 'auto 1fr auto',
         height: '100%',
-        
+
+        '@desktop': {
+            gridTemplateAreas: `
+                'Header Header'
+                'Main Hero'
+                'Footer Footer'
+            `,
+        },
 
         'main': {
             gridArea: 'Main',
             display: 'flex',
             flexDirection: 'column',
             
-            'div': {
+            '@desktop': {
+                justifyContent: 'space-between',
+                my: '12rem',
+            },
+            
+            'div:first-child': {
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'center',
                 textAlign: 'center',
+                flex: 1,
+
+                '@desktop': {
+                    textAlign: 'left',
+                    flex: 0,
+                },
 
                 'h1': {
                     fontSize: '2.6rem',
                     marginBottom: '1.2rem',
+                    
+                    'span': {
+                        backgroundImage: 'url(/line.svg)',
+                        backgroundPosition: 'bottom',
+                        backgroundRepeat: 'no-repeat',
+                        backgroundSize: 'contain',
+                    },
+
+                    '@desktop': {
+                        fontSize: '3.2rem',
+                        maxWidth: '22rem',
+                    }
                 },
                 '> span': {
                     fontSize: '1.125rem',
                     color: '$secondary',
                 }
             },
-            
-            'div:last-child': {
-                '> span': {
-                    transform: 'translateY(30%)'
-                }
-            }
+        },
+    }
+})
+
+export const ButtonGroup = styled('div', {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    textAlign: 'center',
+    my: '$2',
+
+    '@tablet': {
+        flexDirection: 'row',
+        '> span': {
+            visibility: 'hidden',
         }
+    },
+
+    'button': {
+        width: '100%'
+    },
+
+    '> span': {
+        transform: 'translateY(30%)',
+        color: '$secondary',
     }
 })
 

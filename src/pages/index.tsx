@@ -1,9 +1,13 @@
 import Head from "next/head"
-import { Header } from "@components/Header"
+import Image from "next/image"
 
+import { FiArrowRight, FiLogIn } from 'react-icons/fi'
+
+import { Header } from "@components/Header"
 import { Button } from "@components/Button"
 import { Footer } from "@components/Footer"
-import { Container } from "../styles/pages/Home"
+import { Hero } from "@components/Hero"
+import { Container, ButtonGroup } from "../styles/pages/Home"
 
 export default function Home() {
   return (
@@ -16,19 +20,30 @@ export default function Home() {
             <Header />
             <main>
                 <div>
-                    <h1>Sweets for all tastes.</h1>
+                    <h1>Sweets for <span>all</span> tastes.</h1>
                     <span>choose, click and enjoy.</span>
                 </div>
-                <div>
-                    <Button type="purple">
+                <ButtonGroup>
+                    <Button aria-label="Browse Sweets" type="purple">
                         <span>Browse Sweets</span>
+                        <FiArrowRight size={32} />
                     </Button>
                     <span>or</span>
-                    <Button type="ghost">
+                    <Button aria-label="Create an account" type="ghost">
                         <span>Create an account</span>
+                        <FiLogIn size={32} />
                     </Button>
-                </div>
+                </ButtonGroup>
             </main>
+            <Hero>
+                <Image
+                    src="/hero.svg"
+                    width={650}
+                    height={650}
+                    alt="Hero"
+                    objectFit="contain"
+                />
+            </Hero>
             <Footer />
         </div>
     </Container>
