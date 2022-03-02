@@ -1,4 +1,4 @@
-import { createStitches, ScaleValue } from "@stitches/react";
+import { createStitches } from "@stitches/react";
 import type * as Stitches from '@stitches/react';
 
 export const {
@@ -13,6 +13,7 @@ export const {
             primary: '#8468F5',
             primaryDark: '#6B56C9',
             secondary: '#AB0067',
+            green: '#B0FF92',
             bg: '#FDCFF3',
         },
         fontWeights: {
@@ -20,9 +21,19 @@ export const {
             semiBold: '600',
             bold: '700',
         },
+        space: {
+            1: '1rem',
+            2: '2rem',
+        },
+        radii: {
+            'full': '999px',
+            'round': '50%',
+        }
     },
     media: {
-        sm: '(min-width: 0px)',
+        mobile: '(min-width: 0px)',
+        tablet: '(min-width: 750px)',
+        desktop: '(min-width: 1300px)',
     },
     utils: {
         mx: (value: Stitches.ScaleValue<'space'>) => ({
