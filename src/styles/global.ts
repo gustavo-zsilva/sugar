@@ -22,8 +22,16 @@ export const globalStyles = globalCss({
         fontFamily: 'Poppins',
         cursor: 'pointer',
         fontSize: '1.125rem',
+
+        '&:focus': {
+            outline: '3px solid $black',
+        },
     },
     'a': {
         textDecoration: 'none',
+
+        '&:focus': {
+            outline: '3px solid $black',
+        }
     },
 })
