@@ -1,14 +1,20 @@
+import { MdIcecream } from 'react-icons/md'
+import { BsCupStraw } from 'react-icons/bs'
+
 import { Container } from './styles'
+import { Button } from '@components/Button'
 
 export function Header() {
     return (
         <Container>
             <strong>
+                <MdIcecream size={25} />
                 Sugar
             </strong>
-            <button>
+            <Button size="sm">
                 <span>Sugar Up</span>
-            </button>
+                <BsCupStraw color="#FFF" size={22} />
+            </Button>
         </Container>
     )
 }

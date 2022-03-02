@@ -9,6 +9,10 @@ export const Container = styled('header', {
 
     'strong': {
         color: '$lightBlack',
+        fontSize: '1.2rem',
+        display: 'flex',
+        gridGap: '.2rem',
+        alignItems: 'center',
     },
 
     'button': {
@@ -16,14 +20,10 @@ export const Container = styled('header', {
         padding: '.6rem 1.2rem',
         borderRadius: '999px',
         border: 0,
-
-        'span': {
-            color: '$white',
-            fontWeight: '$semiBold',
-        }
+        display: 'flex',
+        alignItems: 'center',
+        gridGap: '.4rem',
+        color: '$white',
+        fontWeight: '$semiBold',
     },
-
-    '@sm': {
-        margin: '0 1rem',
-    }
 })
